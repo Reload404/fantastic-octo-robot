@@ -1,0 +1,22 @@
+{
+  "itemLibraries": {
+    "default": {
+      "name": "默认词条库",
+      "created": "2026-05-30T00:00:00.000Z",
+      "modified": "2026-05-30T00:00:00.000Z",
+      "items": []
+    }
+  },
+  "affixLibraries": {
+    "default": {
+      "name": "默认词缀库",
+      "created": "2026-05-30T00:00:00.000Z",
+      "modified": "2026-05-30T00:00:00.000Z",
+      "affixes": []
+    }
+  },
+  "config": {
+    "currentItemLibrary": "default",
+    "currentAffixLibrary": "default"
+  }
+}
