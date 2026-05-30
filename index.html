@@ -1,0 +1,2171 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 8.1.2">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"example.com","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+  </script>
+
+  <meta name="description" content="D&amp;D 战利品生成器                   tailwind.config &#x3D; {             theme: {                 extend: {                     colors: {                         sidebar: &#39;#202020&#39;,">
+<meta property="og:type" content="website">
+<meta property="og:title" content="收集">
+<meta property="og:url" content="http://example.com/LOOT/index.html">
+<meta property="og:site_name" content="收集">
+<meta property="og:description" content="D&amp;D 战利品生成器                   tailwind.config &#x3D; {             theme: {                 extend: {                     colors: {                         sidebar: &#39;#202020&#39;,">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2026-05-30T00:39:37.296Z">
+<meta property="article:modified_time" content="2026-05-26T11:47:59.834Z">
+<meta property="article:author" content="Reload404">
+<meta name="twitter:card" content="summary">
+
+<link rel="canonical" href="http://example.com/LOOT/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : false,
+    lang   : 'zh-CN'
+  };
+</script>
+
+  <title> | 收集
+</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">收集</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
+
+  </li>
+        <li class="menu-item menu-item-loot">
+
+    <a href="/LOOT/" rel="section"><i class="fa fa-gift fa-fw"></i>loot</a>
+
+  </li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+  
+  
+
+          <div class="content page posts-expand">
+            
+
+    
+    
+    
+    <div class="post-block" lang="zh-CN">
+      <header class="post-header">
+
+<h1 class="post-title" itemprop="name headline">
+</h1>
+
+<div class="post-meta">
+  
+
+</div>
+
+</header>
+
+      
+      
+      
+      <div class="post-body">
+          <!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>D&D 战利品生成器</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        sidebar: '#202020',
+                        primary: '#5D9C41',
+                        border: '#A7A7A7',
+                        notification: '#E8F5E9',
+                        'primary-hover': '#4A7D33',
+                        'sidebar-hover': '#303030',
+                        'table-header': '#E0E0E0',
+                        'table-row-alt': '#F5F5F5'
+                    },
+                    fontFamily: {
+                        sans: ['SimHei', 'Microsoft YaHei', 'sans-serif'],
+                    },
+                    boxShadow: {
+                        'mc': '1px 1px 0px 0px rgba(0,0,0,0.5)',
+                        'mc-inset': 'inset 1px 1px 0px 0px rgba(0,0,0,0.5)'
+                    }
+                }
+            }
+        }
+    </script>
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .mc-border {
+                border: 2px solid #A7A7A7;
+                box-shadow: 1px 1px 0px 0px rgba(0,0,0,0.5);
+            }
+            .mc-button {
+                background-color: #5D9C41;
+                border: 2px solid #A7A7A7;
+                box-shadow: 1px 1px 0px 0px rgba(0,0,0,0.5);
+                color: white;
+                padding: 4px 12px;
+                cursor: pointer;
+                transition: background-color 0.1s;
+            }
+            .mc-button:hover {
+                background-color: #4A7D33;
+            }
+            .mc-button:active {
+                box-shadow: inset 1px 1px 0px 0px rgba(0,0,0,0.5);
+            }
+            .mc-input {
+                border: 2px solid #A7A7A7;
+                box-shadow: inset 1px 1px 0px 0px rgba(0,0,0,0.5);
+                padding: 4px 8px;
+                background-color: white;
+            }
+            .mc-select {
+                border: 2px solid #A7A7A7;
+                box-shadow: inset 1px 1px 0px 0px rgba(0,0,0,0.5);
+                padding: 4px 8px;
+                background-color: white;
+                appearance: none;
+                background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"><path fill="black" d="M4 6l4 4 4-4H4z"/></svg>');
+                background-repeat: no-repeat;
+                background-position: right 4px center;
+                padding-right: 24px;
+            }
+            .mc-textarea {
+                border: 2px solid #A7A7A7;
+                box-shadow: inset 1px 1px 0px 0px rgba(0,0,0,0.5);
+                padding: 4px 8px;
+                background-color: white;
+                resize: vertical;
+            }
+            .mc-table {
+                border-collapse: collapse;
+                width: 100%;
+            }
+            .mc-table th, .mc-table td {
+                border: 1px solid #A7A7A7;
+                padding: 6px 8px;
+                text-align: left;
+            }
+            .mc-table th {
+                background-color: #E0E0E0;
+                font-weight: bold;
+            }
+            .mc-table tr:nth-child(even) {
+                background-color: #F5F5F5;
+            }
+            .sidebar-item {
+                display: flex;
+                align-items: center;
+                padding: 8px 12px;
+                cursor: pointer;
+                color: white;
+            }
+            .sidebar-item:hover {
+                background-color: #303030;
+            }
+            .sidebar-item.active {
+                background-color: #5D9C41;
+            }
+            .sidebar-icon {
+                width: 16px;
+                height: 16px;
+                margin-right: 8px;
+                image-rendering: pixelated;
+            }
+            .rarity-common { color: #FFFFFF; }
+            .rarity-uncommon { color: #55FF55; }
+            .rarity-rare { color: #5555FF; }
+            .rarity-very-rare { color: #AA00AA; }
+            .rarity-legendary { color: #FFAA00; }
+            .rarity-artifact { color: #FF5555; }
+            .rarity-unknown { color: #AAAAAA; }
+            .rarity-unknown-magic { color: #00AAAA; }
+            
+            .affix-t1 { color: #FF5555; }
+            .affix-t2 { color: #FFAA00; }
+            .affix-t3 { color: #FFFF55; }
+            .affix-t4 { color: #55FF55; }
+            .affix-t5 { color: #5555FF; }
+        }
+    </style>
+</head>
+<body class="bg-white font-sans text-black">
+    <div class="flex h-screen">
+        <!-- 侧边栏 -->
+        <div class="w-48 bg-sidebar text-white flex flex-col">
+            <div class="p-4 border-b border-border">
+                <h1 class="text-lg font-bold">战利品生成器</h1>
+            </div>
+            <div class="flex-1 overflow-y-auto">
+                <div class="sidebar-item active" data-tab="generator">
+                    <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16'><rect x='2' y='2' width='12' height='12' fill='%238B4513'/><rect x='4' y='4' width='8' height='8' fill='%23D2691E'/><rect x='6' y='6' width='4' height='4' fill='%23FFD700'/></svg>" class="sidebar-icon" alt="生成器">
+                    战利品生成
+                </div>
+                <div class="sidebar-item" data-tab="items">
+                    <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16'><rect x='1' y='1' width='14' height='14' fill='%23C0C0C0'/><rect x='2' y='2' width='12' height='12' fill='%23FFFFFF'/><rect x='3' y='3' width='10' height='2' fill='%23808080'/><rect x='3' y='6' width='10' height='1' fill='%23C0C0C0'/><rect x='3' y='8' width='10' height='1' fill='%23C0C0C0'/><rect x='3' y='10' width='10' height='1' fill='%23C0C0C0'/><rect x='3' y='12' width='10' height='1' fill='%23C0C0C0'/></svg>" class="sidebar-icon" alt="物品库">
+                    物品库管理
+                </div>
+                <div class="sidebar-item" data-tab="affixes">
+                    <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16'><circle cx='8' cy='8' r='7' fill='%230000FF'/><circle cx='8' cy='8' r='5' fill='%2300FFFF'/><circle cx='8' cy='8' r='3' fill='%23FFFFFF'/></svg>" class="sidebar-icon" alt="词缀库">
+                    词缀库管理
+                </div>
+                <div class="sidebar-item" data-tab="libraries">
+                    <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16'><rect x='1' y='1' width='14' height='14' fill='%238B4513'/><rect x='2' y='2' width='12' height='12' fill='%23D2691E'/><rect x='3' y='3' width='4' height='10' fill='%23FFFFFF'/><rect x='8' y='3' width='4' height='10' fill='%23FFFFFF'/></svg>" class="sidebar-icon" alt="词条库">
+                    词条库管理
+                </div>
+                <div class="sidebar-item" data-tab="affix-libraries">
+                    <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16'><rect x='1' y='1' width='14' height='14' fill='%234B0082'/><rect x='2' y='2' width='12' height='12' fill='%23800080'/><rect x='3' y='3' width='4' height='10' fill='%23FFFFFF'/><rect x='8' y='3' width='4' height='10' fill='%23FFFFFF'/></svg>" class="sidebar-icon" alt="词缀库">
+                    词缀库管理
+                </div>
+            </div>
+            <div class="p-2 border-t border-border text-xs text-center">
+                数据保存在本地
+            </div>
+        </div>
+
+        <!-- 主内容区 -->
+        <div class="flex-1 flex flex-col overflow-hidden">
+            <!-- 顶部通知栏 -->
+            <div id="notification-bar" class="bg-notification p-2 border-b border-border hidden">
+                <span id="notification-text"></span>
+                <button id="close-notification" class="ml-4 text-gray-600 hover:text-black">×</button>
+            </div>
+
+            <!-- 内容区 -->
+            <div class="flex-1 overflow-auto p-4">
+                <!-- 战利品生成器标签页 -->
+                <div id="tab-generator" class="tab-content">
+                    <h2 class="text-2xl font-bold mb-4 border-b-2 border-border pb-2">战利品生成器</h2>
+                    
+                    <div class="mc-border p-4 mb-4">
+                        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-4">
+                            <div>
+                                <label class="block mb-1 font-bold">生成数量:</label>
+                                <input type="number" id="generate-count" class="mc-input w-full" value="1" min="1" max="100">
+                            </div>
+                            <div>
+                                <label class="block mb-1 font-bold">稀有度筛选:</label>
+                                <select id="rarity-filter" class="mc-select w-full">
+                                    <option value="all">全部稀有度</option>
+                                    <option value="common">常见</option>
+                                    <option value="uncommon">非常见</option>
+                                    <option value="rare">珍稀</option>
+                                    <option value="very-rare">非常珍稀</option>
+                                    <option value="legendary">传说</option>
+                                    <option value="artifact">神器</option>
+                                    <option value="unknown">不明</option>
+                                    <option value="unknown-magic">不明（魔法）</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label class="block mb-1 font-bold">物品类型:</label>
+                                <select id="type-filter" class="mc-select w-full">
+                                    <option value="all">全部类型</option>
+                                    <option value="weapon">武器</option>
+                                    <option value="armor">防具</option>
+                                    <option value="item">道具</option>
+                                    <option value="consumable">消耗品</option>
+                                    <option value="junk">杂物</option>
+                                    <option value="material">材料</option>
+                                </select>
+                            </div>
+                            <div class="flex items-end">
+                                <button id="generate-button" class="mc-button w-full">生成战利品</button>
+                            </div>
+                        </div>
+                        
+                        <div id="current-selection" class="p-2 bg-table-header mc-border mb-4">
+                            <span class="font-bold">当前将生成: </span>
+                            <span id="selection-text">全部稀有度、全部类型的战利品</span>
+                        </div>
+                    </div>
+
+                    <div class="mc-border p-4 mb-4">
+                        <h3 class="text-xl font-bold mb-2 border-b border-border pb-1">词缀设置</h3>
+                        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-4">
+                            <div>
+                                <label class="block mb-1 font-bold">正面词缀数量:</label>
+                                <input type="number" id="positive-affixes" class="mc-input w-full" value="0" min="0" max="5">
+                            </div>
+                            <div>
+                                <label class="block mb-1 font-bold">负面词缀数量:</label>
+                                <input type="number" id="negative-affixes" class="mc-input w-full" value="0" min="0" max="5">
+                            </div>
+                            <div>
+                                <label class="block mb-1 font-bold">词缀稀有度:</label>
+                                <select id="affix-rarity-filter" class="mc-select w-full">
+                                    <option value="all">全部稀有度</option>
+                                    <option value="common">常见</option>
+                                    <option value="rare">稀有</option>
+                                    <option value="epic">珍稀</option>
+                                    <option value="legendary">传说</option>
+                                </select>
+                            </div>
+                            <div class="flex items-end">
+                                <button id="add-affixes-button" class="mc-button w-full" disabled>为选中物品添加词缀</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mc-border p-4">
+                        <h3 class="text-xl font-bold mb-2 border-b border-border pb-1">生成结果</h3>
+                        <div id="generated-items" class="space-y-4">
+                            <p class="text-gray-500">点击"生成战利品"按钮开始生成</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 物品库管理标签页 -->
+                <div id="tab-items" class="tab-content hidden">
+                    <h2 class="text-2xl font-bold mb-4 border-b-2 border-border pb-2">物品库管理</h2>
+                    
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <button id="add-item-button" class="mc-button">添加新物品</button>
+                        <button id="import-items-button" class="mc-button">批量导入</button>
+                        <button id="export-items-button" class="mc-button">导出所有物品</button>
+                        <select id="items-rarity-filter" class="mc-select">
+                            <option value="all">全部稀有度</option>
+                            <option value="common">常见</option>
+                            <option value="uncommon">非常见</option>
+                            <option value="rare">珍稀</option>
+                            <option value="very-rare">非常珍稀</option>
+                            <option value="legendary">传说</option>
+                            <option value="artifact">神器</option>
+                            <option value="unknown">不明</option>
+                            <option value="unknown-magic">不明（魔法）</option>
+                        </select>
+                        <select id="items-type-filter" class="mc-select">
+                            <option value="all">全部类型</option>
+                            <option value="weapon">武器</option>
+                            <option value="armor">防具</option>
+                            <option value="item">道具</option>
+                            <option value="consumable">消耗品</option>
+                            <option value="junk">杂物</option>
+                            <option value="material">材料</option>
+                        </select>
+                        <select id="items-sort-by" class="mc-select">
+                            <option value="name-asc">名称 (A-Z)</option>
+                            <option value="name-desc">名称 (Z-A)</option>
+                            <option value="rarity-asc">稀有度 (低-高)</option>
+                            <option value="rarity-desc">稀有度 (高-低)</option>
+                            <option value="weight-asc">重量 (轻-重)</option>
+                            <option value="weight-desc">重量 (重-轻)</option>
+                        </select>
+                    </div>
+
+                    <div class="mc-border overflow-x-auto">
+                        <table class="mc-table">
+                            <thead>
+                                <tr>
+                                    <th>名称</th>
+                                    <th>稀有度</th>
+                                    <th>重量</th>
+                                    <th>类型</th>
+                                    <th>描述</th>
+                                    <th>操作</th>
+                                </tr>
+                            </thead>
+                            <tbody id="items-table-body">
+                                <tr>
+                                    <td colspan="6" class="text-center text-gray-500">暂无物品数据，请添加物品</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- 词缀库管理标签页 -->
+                <div id="tab-affixes" class="tab-content hidden">
+                    <h2 class="text-2xl font-bold mb-4 border-b-2 border-border pb-2">词缀库管理</h2>
+                    
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <button id="add-affix-button" class="mc-button">添加新词缀</button>
+                        <button id="import-affixes-button" class="mc-button">批量导入</button>
+                        <button id="export-affixes-button" class="mc-button">导出所有词缀</button>
+                        <select id="affixes-type-filter" class="mc-select">
+                            <option value="all">全部类型</option>
+                            <option value="weapon">武器</option>
+                            <option value="armor">防具</option>
+                            <option value="item">道具</option>
+                            <option value="consumable">消耗品</option>
+                            <option value="junk">杂物</option>
+                            <option value="material">材料</option>
+                        </select>
+                        <select id="affixes-rarity-filter" class="mc-select">
+                            <option value="all">全部稀有度</option>
+                            <option value="common">常见</option>
+                            <option value="rare">稀有</option>
+                            <option value="epic">珍稀</option>
+                            <option value="legendary">传说</option>
+                        </select>
+                        <select id="affixes-sort-by" class="mc-select">
+                            <option value="name-asc">名称 (A-Z)</option>
+                            <option value="name-desc">名称 (Z-A)</option>
+                            <option value="tier-asc">等级 (T1-T5)</option>
+                            <option value="tier-desc">等级 (T5-T1)</option>
+                        </select>
+                    </div>
+
+                    <div class="mc-border overflow-x-auto">
+                        <table class="mc-table">
+                            <thead>
+                                <tr>
+                                    <th>名称</th>
+                                    <th>类型</th>
+                                    <th>稀有度</th>
+                                    <th>等级</th>
+                                    <th>效果</th>
+                                    <th>操作</th>
+                                </tr>
+                            </thead>
+                            <tbody id="affixes-table-body">
+                                <tr>
+                                    <td colspan="6" class="text-center text-gray-500">暂无词缀数据，请添加词缀</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- 词条库管理标签页 -->
+                <div id="tab-libraries" class="tab-content hidden">
+                    <h2 class="text-2xl font-bold mb-4 border-b-2 border-border pb-2">物品词条库管理</h2>
+                    
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <button id="add-library-button" class="mc-button">创建新词条库</button>
+                        <button id="delete-library-button" class="mc-button" style="background-color: #D32F2F;">删除当前词条库</button>
+                        <select id="current-library" class="mc-select">
+                            <option value="default">默认词条库</option>
+                        </select>
+                    </div>
+
+                    <div class="mc-border p-4">
+                        <h3 class="text-xl font-bold mb-2 border-b border-border pb-1">当前词条库信息</h3>
+                        <p><span class="font-bold">名称:</span> <span id="library-name">默认词条库</span></p>
+                        <p><span class="font-bold">物品数量:</span> <span id="library-item-count">0</span></p>
+                        <p><span class="font-bold">创建时间:</span> <span id="library-created">-</span></p>
+                        <p><span class="font-bold">最后修改:</span> <span id="library-modified">-</span></p>
+                    </div>
+                </div>
+
+                <!-- 词缀库管理标签页 -->
+                <div id="tab-affix-libraries" class="tab-content hidden">
+                    <h2 class="text-2xl font-bold mb-4 border-b-2 border-border pb-2">词缀库管理</h2>
+                    
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <button id="add-affix-library-button" class="mc-button">创建新词缀库</button>
+                        <button id="delete-affix-library-button" class="mc-button" style="background-color: #D32F2F;">删除当前词缀库</button>
+                        <select id="current-affix-library" class="mc-select">
+                            <option value="default">默认词缀库</option>
+                        </select>
+                    </div>
+
+                    <div class="mc-border p-4">
+                        <h3 class="text-xl font-bold mb-2 border-b border-border pb-1">当前词缀库信息</h3>
+                        <p><span class="font-bold">名称:</span> <span id="affix-library-name">默认词缀库</span></p>
+                        <p><span class="font-bold">词缀数量:</span> <span id="affix-library-count">0</span></p>
+                        <p><span class="font-bold">创建时间:</span> <span id="affix-library-created">-</span></p>
+                        <p><span class="font-bold">最后修改:</span> <span id="affix-library-modified">-</span></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 物品编辑模态框 -->
+    <div id="item-modal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center hidden z-50">
+        <div class="bg-white mc-border w-full max-w-2xl max-h-[90vh] overflow-auto">
+            <div class="p-4 border-b-2 border-border">
+                <h3 id="item-modal-title" class="text-xl font-bold">添加新物品</h3>
+            </div>
+            <div class="p-4">
+                <form id="item-form">
+                    <input type="hidden" id="item-id">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+                        <div>
+                            <label class="block mb-1 font-bold">名称:</label>
+                            <input type="text" id="item-name" class="mc-input w-full" required>
+                        </div>
+                        <div>
+                            <label class="block mb-1 font-bold">稀有度:</label>
+                            <select id="item-rarity" class="mc-select w-full" required>
+                                <option value="common">常见</option>
+                                <option value="uncommon">非常见</option>
+                                <option value="rare">珍稀</option>
+                                <option value="very-rare">非常珍稀</option>
+                                <option value="legendary">传说</option>
+                                <option value="artifact">神器</option>
+                                <option value="unknown">不明</option>
+                                <option value="unknown-magic">不明（魔法）</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="block mb-1 font-bold">重量:</label>
+                            <input type="text" id="item-weight" class="mc-input w-full" required placeholder="例如: 1 lb 或 0.5 kg">
+                        </div>
+                        <div>
+                            <label class="block mb-1 font-bold">类型:</label>
+                            <select id="item-type" class="mc-select w-full" required>
+                                <option value="weapon">武器</option>
+                                <option value="armor">防具</option>
+                                <option value="item">道具</option>
+                                <option value="consumable">消耗品</option>
+                                <option value="junk">杂物</option>
+                                <option value="material">材料</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="mb-4">
+                        <label class="block mb-1 font-bold">物品描述:</label>
+                        <textarea id="item-description" class="mc-textarea w-full" rows="6" required placeholder="输入物品的详细描述..."></textarea>
+                    </div>
+                    <div class="flex justify-end gap-2">
+                        <button type="button" id="cancel-item-button" class="mc-button" style="background-color: #757575;">取消</button>
+                        <button type="submit" class="mc-button">保存</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- 词缀编辑模态框 -->
+    <div id="affix-modal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center hidden z-50">
+        <div class="bg-white mc-border w-full max-w-2xl max-h-[90vh] overflow-auto">
+            <div class="p-4 border-b-2 border-border">
+                <h3 id="affix-modal-title" class="text-xl font-bold">添加新词缀</h3>
+            </div>
+            <div class="p-4">
+                <form id="affix-form">
+                    <input type="hidden" id="affix-id">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+                        <div>
+                            <label class="block mb-1 font-bold">名称:</label>
+                            <input type="text" id="affix-name" class="mc-input w-full" required>
+                        </div>
+                        <div>
+                            <label class="block mb-1 font-bold">适用类型:</label>
+                            <select id="affix-type" class="mc-select w-full" required>
+                                <option value="weapon">武器</option>
+                                <option value="armor">防具</option>
+                                <option value="item">道具</option>
+                                <option value="consumable">消耗品</option>
+                                <option value="junk">杂物</option>
+                                <option value="material">材料</option>
+                                <option value="all">所有类型</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="block mb-1 font-bold">稀有度:</label>
+                            <select id="affix-rarity" class="mc-select w-full" required>
+                                <option value="common">常见</option>
+                                <option value="rare">稀有</option>
+                                <option value="epic">珍稀</option>
+                                <option value="legendary">传说</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="block mb-1 font-bold">词缀类型:</label>
+                            <select id="affix-polarity" class="mc-select w-full" required>
+                                <option value="positive">正面词缀</option>
+                                <option value="negative">负面词缀</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="mb-4">
+                        <label class="block mb-1 font-bold">效果模板 (使用*表示数值位置):</label>
+                        <input type="text" id="affix-effect" class="mc-input w-full" required placeholder="例如: 每次攻击额外造成*点伤害">
+                        <p class="text-sm text-gray-600 mt-1">示例: "增加*点护甲值" 或 "攻击时有*%几率造成暴击"</p>
+                    </div>
+                    <div class="mb-4">
+                        <label class="block mb-1 font-bold">T级数值范围 (每行一个等级，格式: T1:最小值-最大值):</label>
+                        <textarea id="affix-tiers" class="mc-textarea w-full" rows="5" required placeholder="T1:10-20
+T2:7-12
+T3:4-8
+T4:2-5
+T5:1-3"></textarea>
+                        <p class="text-sm text-gray-600 mt-1">支持跑团骰子格式，例如: T1:1d6+2 或 T3:2d4</p>
+                    </div>
+                    <div class="flex justify-end gap-2">
+                        <button type="button" id="cancel-affix-button" class="mc-button" style="background-color: #757575;">取消</button>
+                        <button type="submit" class="mc-button">保存</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- 批量导入模态框 -->
+    <div id="import-modal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center hidden z-50">
+        <div class="bg-white mc-border w-full max-w-2xl max-h-[90vh] overflow-auto">
+            <div class="p-4 border-b-2 border-border">
+                <h3 id="import-modal-title" class="text-xl font-bold">批量导入数据</h3>
+            </div>
+            <div class="p-4">
+                <form id="import-form">
+                    <div class="mb-4">
+                        <label class="block mb-1 font-bold">JSON数据:</label>
+                        <textarea id="import-data" class="mc-textarea w-full" rows="10" required placeholder="粘贴JSON格式的数据..."></textarea>
+                    </div>
+                    <div class="mb-4">
+                        <label class="flex items-center">
+                            <input type="checkbox" id="import-overwrite" class="mr-2">
+                            <span>覆盖现有数据 (不勾选则追加)</span>
+                        </label>
+                    </div>
+                    <div class="flex justify-end gap-2">
+                        <button type="button" id="cancel-import-button" class="mc-button" style="background-color: #757575;">取消</button>
+                        <button type="submit" class="mc-button">导入</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- 词条库创建模态框 -->
+    <div id="library-modal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center hidden z-50">
+        <div class="bg-white mc-border w-full max-w-md">
+            <div class="p-4 border-b-2 border-border">
+                <h3 id="library-modal-title" class="text-xl font-bold">创建新词条库</h3>
+            </div>
+            <div class="p-4">
+                <form id="library-form">
+                    <div class="mb-4">
+                        <label class="block mb-1 font-bold">词条库名称:</label>
+                        <input type="text" id="library-name-input" class="mc-input w-full" required>
+                    </div>
+                    <div class="flex justify-end gap-2">
+                        <button type="button" id="cancel-library-button" class="mc-button" style="background-color: #757575;">取消</button>
+                        <button type="submit" class="mc-button">创建</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // 数据存储类
+        class DataStore {
+            constructor() {
+                this.initDefaultData();
+            }
+
+            initDefaultData() {
+                if (!localStorage.getItem('itemLibraries')) {
+                    localStorage.setItem('itemLibraries', JSON.stringify({
+                        default: {
+                            name: '默认词条库',
+                            created: new Date().toISOString(),
+                            modified: new Date().toISOString(),
+                            items: []
+                        }
+                    }));
+                }
+
+                if (!localStorage.getItem('affixLibraries')) {
+                    localStorage.setItem('affixLibraries', JSON.stringify({
+                        default: {
+                            name: '默认词缀库',
+                            created: new Date().toISOString(),
+                            modified: new Date().toISOString(),
+                            affixes: []
+                        }
+                    }));
+                }
+
+                if (!localStorage.getItem('currentItemLibrary')) {
+                    localStorage.setItem('currentItemLibrary', 'default');
+                }
+
+                if (!localStorage.getItem('currentAffixLibrary')) {
+                    localStorage.setItem('currentAffixLibrary', 'default');
+                }
+            }
+
+            // 物品库相关方法
+            getItemLibraries() {
+                return JSON.parse(localStorage.getItem('itemLibraries'));
+            }
+
+            getCurrentItemLibraryId() {
+                return localStorage.getItem('currentItemLibrary');
+            }
+
+            getCurrentItemLibrary() {
+                const libraries = this.getItemLibraries();
+                const currentId = this.getCurrentItemLibraryId();
+                return libraries[currentId];
+            }
+
+            setCurrentItemLibrary(libraryId) {
+                localStorage.setItem('currentItemLibrary', libraryId);
+            }
+
+            saveItemLibrary(libraryId, libraryData) {
+                const libraries = this.getItemLibraries();
+                libraryData.modified = new Date().toISOString();
+                libraries[libraryId] = libraryData;
+                localStorage.setItem('itemLibraries', JSON.stringify(libraries));
+            }
+
+            addItemLibrary(libraryId, libraryData) {
+                const libraries = this.getItemLibraries();
+                libraries[libraryId] = libraryData;
+                localStorage.setItem('itemLibraries', JSON.stringify(libraries));
+            }
+
+            deleteItemLibrary(libraryId) {
+                const libraries = this.getItemLibraries();
+                delete libraries[libraryId];
+                localStorage.setItem('itemLibraries', JSON.stringify(libraries));
+                
+                if (this.getCurrentItemLibraryId() === libraryId) {
+                    this.setCurrentItemLibrary('default');
+                }
+            }
+
+            getItems() {
+                return this.getCurrentItemLibrary().items;
+            }
+
+            saveItems(items) {
+                const library = this.getCurrentItemLibrary();
+                library.items = items;
+                this.saveItemLibrary(this.getCurrentItemLibraryId(), library);
+            }
+
+            // 词缀库相关方法
+            getAffixLibraries() {
+                return JSON.parse(localStorage.getItem('affixLibraries'));
+            }
+
+            getCurrentAffixLibraryId() {
+                return localStorage.getItem('currentAffixLibrary');
+            }
+
+            getCurrentAffixLibrary() {
+                const libraries = this.getAffixLibraries();
+                const currentId = this.getCurrentAffixLibraryId();
+                return libraries[currentId];
+            }
+
+            setCurrentAffixLibrary(libraryId) {
+                localStorage.setItem('currentAffixLibrary', libraryId);
+            }
+
+            saveAffixLibrary(libraryId, libraryData) {
+                const libraries = this.getAffixLibraries();
+                libraryData.modified = new Date().toISOString();
+                libraries[libraryId] = libraryData;
+                localStorage.setItem('affixLibraries', JSON.stringify(libraries));
+            }
+
+            addAffixLibrary(libraryId, libraryData) {
+                const libraries = this.getAffixLibraries();
+                libraries[libraryId] = libraryData;
+                localStorage.setItem('affixLibraries', JSON.stringify(libraries));
+            }
+
+            deleteAffixLibrary(libraryId) {
+                const libraries = this.getAffixLibraries();
+                delete libraries[libraryId];
+                localStorage.setItem('affixLibraries', JSON.stringify(libraries));
+                
+                if (this.getCurrentAffixLibraryId() === libraryId) {
+                    this.setCurrentAffixLibrary('default');
+                }
+            }
+
+            getAffixes() {
+                return this.getCurrentAffixLibrary().affixes;
+            }
+
+            saveAffixes(affixes) {
+                const library = this.getCurrentAffixLibrary();
+                library.affixes = affixes;
+                this.saveAffixLibrary(this.getCurrentAffixLibraryId(), library);
+            }
+        }
+
+        // 工具函数
+        function generateId() {
+            return Date.now().toString(36) + Math.random().toString(36).substr(2, 5);
+        }
+
+        function showNotification(message) {
+            const notificationBar = document.getElementById('notification-bar');
+            const notificationText = document.getElementById('notification-text');
+            notificationText.textContent = message;
+            notificationBar.classList.remove('hidden');
+            
+            setTimeout(() => {
+                notificationBar.classList.add('hidden');
+            }, 3000);
+        }
+
+        function parseDiceExpression(expression) {
+            // 简单的骰子表达式解析器，支持如 1d6, 2d4+2, 3d8-1 等格式
+            const match = expression.match(/^(\d+)d(\d+)([+-]\d+)?$/i);
+            if (!match) return expression;
+            
+            const numDice = parseInt(match[1]);
+            const dieType = parseInt(match[2]);
+            const modifier = match[3] ? parseInt(match[3]) : 0;
+            
+            let total = 0;
+            for (let i = 0; i < numDice; i++) {
+                total += Math.floor(Math.random() * dieType) + 1;
+            }
+            
+            return total + modifier;
+        }
+
+        function getRarityClass(rarity) {
+            const rarityMap = {
+                'common': 'rarity-common',
+                'uncommon': 'rarity-uncommon',
+                'rare': 'rarity-rare',
+                'very-rare': 'rarity-very-rare',
+                'legendary': 'rarity-legendary',
+                'artifact': 'rarity-artifact',
+                'unknown': 'rarity-unknown',
+                'unknown-magic': 'rarity-unknown-magic'
+            };
+            return rarityMap[rarity] || '';
+        }
+
+        function getRarityName(rarity) {
+            const rarityMap = {
+                'common': '常见',
+                'uncommon': '非常见',
+                'rare': '珍稀',
+                'very-rare': '非常珍稀',
+                'legendary': '传说',
+                'artifact': '神器',
+                'unknown': '不明',
+                'unknown-magic': '不明（魔法）'
+            };
+            return rarityMap[rarity] || rarity;
+        }
+
+        function getTypeName(type) {
+            const typeMap = {
+                'weapon': '武器',
+                'armor': '防具',
+                'item': '道具',
+                'consumable': '消耗品',
+                'junk': '杂物',
+                'material': '材料'
+            };
+            return typeMap[type] || type;
+        }
+
+        function getAffixTierClass(tier) {
+            const tierMap = {
+                'T1': 'affix-t1',
+                'T2': 'affix-t2',
+                'T3': 'affix-t3',
+                'T4': 'affix-t4',
+                'T5': 'affix-t5'
+            };
+            return tierMap[tier] || '';
+        }
+
+        // 主应用类
+        class LootGeneratorApp {
+            constructor() {
+                this.dataStore = new DataStore();
+                this.selectedGeneratedItem = null;
+                this.init();
+            }
+
+            init() {
+                this.setupEventListeners();
+                this.updateSelectionText();
+                this.renderItemsTable();
+                this.renderAffixesTable();
+                this.updateLibrarySelects();
+                this.updateLibraryInfo();
+                this.updateAffixLibraryInfo();
+            }
+
+            setupEventListeners() {
+                // 标签页切换
+                document.querySelectorAll('.sidebar-item').forEach(item => {
+                    item.addEventListener('click', (e) => {
+                        const tabId = e.currentTarget.dataset.tab;
+                        this.switchTab(tabId);
+                    });
+                });
+
+                // 通知栏关闭
+                document.getElementById('close-notification').addEventListener('click', () => {
+                    document.getElementById('notification-bar').classList.add('hidden');
+                });
+
+                // 生成器相关
+                document.getElementById('generate-button').addEventListener('click', () => this.generateLoot());
+                document.getElementById('add-affixes-button').addEventListener('click', () => this.addAffixesToSelectedItem());
+                
+                document.getElementById('rarity-filter').addEventListener('change', () => this.updateSelectionText());
+                document.getElementById('type-filter').addEventListener('change', () => this.updateSelectionText());
+
+                // 物品库相关
+                document.getElementById('add-item-button').addEventListener('click', () => this.openItemModal());
+                document.getElementById('import-items-button').addEventListener('click', () => this.openImportModal('items'));
+                document.getElementById('export-items-button').addEventListener('click', () => this.exportItems());
+                document.getElementById('items-rarity-filter').addEventListener('change', () => this.renderItemsTable());
+                document.getElementById('items-type-filter').addEventListener('change', () => this.renderItemsTable());
+                document.getElementById('items-sort-by').addEventListener('change', () => this.renderItemsTable());
+
+                // 词缀库相关
+                document.getElementById('add-affix-button').addEventListener('click', () => this.openAffixModal());
+                document.getElementById('import-affixes-button').addEventListener('click', () => this.openImportModal('affixes'));
+                document.getElementById('export-affixes-button').addEventListener('click', () => this.exportAffixes());
+                document.getElementById('affixes-type-filter').addEventListener('change', () => this.renderAffixesTable());
+                document.getElementById('affixes-rarity-filter').addEventListener('change', () => this.renderAffixesTable());
+                document.getElementById('affixes-sort-by').addEventListener('change', () => this.renderAffixesTable());
+
+                // 词条库相关
+                document.getElementById('add-library-button').addEventListener('click', () => this.openLibraryModal('item'));
+                document.getElementById('delete-library-button').addEventListener('click', () => this.deleteCurrentLibrary());
+                document.getElementById('current-library').addEventListener('change', (e) => {
+                    this.dataStore.setCurrentItemLibrary(e.target.value);
+                    this.renderItemsTable();
+                    this.updateLibraryInfo();
+                });
+
+                // 词缀库相关
+                document.getElementById('add-affix-library-button').addEventListener('click', () => this.openLibraryModal('affix'));
+                document.getElementById('delete-affix-library-button').addEventListener('click', () => this.deleteCurrentAffixLibrary());
+                document.getElementById('current-affix-library').addEventListener('change', (e) => {
+                    this.dataStore.setCurrentAffixLibrary(e.target.value);
+                    this.renderAffixesTable();
+                    this.updateAffixLibraryInfo();
+                });
+
+                // 模态框相关
+                document.getElementById('item-form').addEventListener('submit', (e) => this.saveItem(e));
+                document.getElementById('cancel-item-button').addEventListener('click', () => this.closeItemModal());
+                
+                document.getElementById('affix-form').addEventListener('submit', (e) => this.saveAffix(e));
+                document.getElementById('cancel-affix-button').addEventListener('click', () => this.closeAffixModal());
+                
+                document.getElementById('import-form').addEventListener('submit', (e) => this.importData(e));
+                document.getElementById('cancel-import-button').addEventListener('click', () => this.closeImportModal());
+                
+                document.getElementById('library-form').addEventListener('submit', (e) => this.createLibrary(e));
+                document.getElementById('cancel-library-button').addEventListener('click', () => this.closeLibraryModal());
+            }
+
+            switchTab(tabId) {
+                // 隐藏所有标签页
+                document.querySelectorAll('.tab-content').forEach(tab => {
+                    tab.classList.add('hidden');
+                });
+                
+                // 移除所有侧边栏项的active类
+                document.querySelectorAll('.sidebar-item').forEach(item => {
+                    item.classList.remove('active');
+                });
+                
+                // 显示选中的标签页
+                document.getElementById(`tab-${tabId}`).classList.remove('hidden');
+                
+                // 激活对应的侧边栏项
+                document.querySelector(`.sidebar-item[data-tab="${tabId}"]`).classList.add('active');
+            }
+
+            updateSelectionText() {
+                const rarity = document.getElementById('rarity-filter').value;
+                const type = document.getElementById('type-filter').value;
+                
+                let rarityText = rarity === 'all' ? '全部稀有度' : getRarityName(rarity);
+                let typeText = type === 'all' ? '全部类型' : getTypeName(type);
+                
+                document.getElementById('selection-text').textContent = `${rarityText}、${typeText}的战利品`;
+            }
+
+            generateLoot() {
+                const count = parseInt(document.getElementById('generate-count').value);
+                const rarityFilter = document.getElementById('rarity-filter').value;
+                const typeFilter = document.getElementById('type-filter').value;
+                
+                const items = this.dataStore.getItems();
+                
+                if (items.length === 0) {
+                    showNotification('物品库为空，请先添加物品');
+                    return;
+                }
+
+                // 筛选物品
+                let filteredItems = items;
+                if (rarityFilter !== 'all') {
+                    filteredItems = filteredItems.filter(item => item.rarity === rarityFilter);
+                }
+                if (typeFilter !== 'all') {
+                    filteredItems = filteredItems.filter(item => item.type === typeFilter);
+                }
+
+                if (filteredItems.length === 0) {
+                    showNotification('没有符合筛选条件的物品');
+                    return;
+                }
+
+                // 随机生成指定数量的物品
+                const generatedItems = [];
+                for (let i = 0; i < count; i++) {
+                    const randomIndex = Math.floor(Math.random() * filteredItems.length);
+                    generatedItems.push({...filteredItems[randomIndex], id: generateId(), affixes: []});
+                }
+
+                this.renderGeneratedItems(generatedItems);
+            }
+
+            renderGeneratedItems(items) {
+                const container = document.getElementById('generated-items');
+                container.innerHTML = '';
+
+                items.forEach((item, index) => {
+                    const itemElement = document.createElement('div');
+                    itemElement.className = 'mc-border p-4 cursor-pointer hover:bg-table-row-alt';
+                    itemElement.dataset.index = index;
+                    
+                    let affixesHtml = '';
+                    if (item.affixes && item.affixes.length > 0) {
+                        affixesHtml = '<div class="mt-2"><span class="font-bold">词缀:</span><ul class="list-disc list-inside ml-2">';
+                        item.affixes.forEach(affix => {
+                            const tierClass = getAffixTierClass(affix.tier);
+                            affixesHtml += `<li class="${tierClass}">${affix.name}: ${affix.effect}</li>`;
+                        });
+                        affixesHtml += '</ul></div>';
+                    }
+
+                    itemElement.innerHTML = `
+                        <div class="flex justify-between items-start">
+                            <div>
+                                <h4 class="text-lg font-bold ${getRarityClass(item.rarity)}">${item.name}</h4>
+                                <div class="text-sm text-gray-600">
+                                    <span>稀有度: ${getRarityName(item.rarity)}</span> | 
+                                    <span>重量: ${item.weight}</span> | 
+                                    <span>类型: ${getTypeName(item.type)}</span>
+                                </div>
+                            </div>
+                            <button class="mc-button select-item-button" data-index="${index}">选择添加词缀</button>
+                        </div>
+                        <div class="mt-2">
+                            <span class="font-bold">描述:</span> ${item.description}
+                        </div>
+                        ${affixesHtml}
+                    `;
+
+                    container.appendChild(itemElement);
+                });
+
+                // 添加选择事件
+                document.querySelectorAll('.select-item-button').forEach(button => {
+                    button.addEventListener('click', (e) => {
+                        e.stopPropagation();
+                        const index = parseInt(e.target.dataset.index);
+                        this.selectGeneratedItem(items[index], index);
+                    });
+                });
+
+                this.generatedItems = items;
+            }
+
+            selectGeneratedItem(item, index) {
+                this.selectedGeneratedItem = {item, index};
+                document.getElementById('add-affixes-button').disabled = false;
+                showNotification(`已选择物品: ${item.name}`);
+            }
+
+            addAffixesToSelectedItem() {
+                if (!this.selectedGeneratedItem) return;
+
+                const positiveCount = parseInt(document.getElementById('positive-affixes').value);
+                const negativeCount = parseInt(document.getElementById('negative-affixes').value);
+                const rarityFilter = document.getElementById('affix-rarity-filter').value;
+                const itemType = this.selectedGeneratedItem.item.type;
+
+                const affixes = this.dataStore.getAffixes();
+                
+                if (affixes.length === 0) {
+                    showNotification('词缀库为空，请先添加词缀');
+                    return;
+                }
+
+                // 筛选词缀
+                let filteredAffixes = affixes.filter(affix => 
+                    affix.type === 'all' || affix.type === itemType
+                );
+
+                if (rarityFilter !== 'all') {
+                    filteredAffixes = filteredAffixes.filter(affix => affix.rarity === rarityFilter);
+                }
+
+                const positiveAffixes = filteredAffixes.filter(affix => affix.polarity === 'positive');
+                const negativeAffixes = filteredAffixes.filter(affix => affix.polarity === 'negative');
+
+                // 检查是否有足够的词缀
+                if (positiveAffixes.length < positiveCount) {
+                    showNotification(`正面词缀不足，只有 ${positiveAffixes.length} 个可用`);
+                    return;
+                }
+
+                if (negativeAffixes.length < negativeCount) {
+                    showNotification(`负面词缀不足，只有 ${negativeAffixes.length} 个可用`);
+                    return;
+                }
+
+                // 随机选择词缀
+                const selectedPositive = this.getRandomUniqueItems(positiveAffixes, positiveCount);
+                const selectedNegative = this.getRandomUniqueItems(negativeAffixes, negativeCount);
+
+                // 生成词缀效果
+                const generatedAffixes = [];
+                
+                selectedPositive.forEach(affix => {
+                    generatedAffixes.push(this.generateAffixEffect(affix));
+                });
+                
+                selectedNegative.forEach(affix => {
+                    generatedAffixes.push(this.generateAffixEffect(affix));
+                });
+
+                // 更新物品
+                this.generatedItems[this.selectedGeneratedItem.index].affixes = generatedAffixes;
+                this.renderGeneratedItems(this.generatedItems);
+                
+                showNotification(`成功为 ${this.selectedGeneratedItem.item.name} 添加了 ${positiveCount + negativeCount} 个词缀`);
+                this.selectedGeneratedItem = null;
+                document.getElementById('add-affixes-button').disabled = true;
+            }
+
+            getRandomUniqueItems(array, count) {
+                const shuffled = [...array].sort(() => 0.5 - Math.random());
+                return shuffled.slice(0, count);
+            }
+
+            generateAffixEffect(affix) {
+                // 解析T级数值范围
+                const tiers = {};
+                affix.tiers.split('\n').forEach(line => {
+                    const match = line.match(/^(T[1-5]):\s*(.+)$/i);
+                    if (match) {
+                        tiers[match[1].toUpperCase()] = match[2].trim();
+                    }
+                });
+
+                // 随机选择一个T级
+                const tierKeys = Object.keys(tiers);
+                const randomTier = tierKeys[Math.floor(Math.random() * tierKeys.length)];
+                const valueRange = tiers[randomTier];
+
+                // 解析数值范围
+                let value;
+                if (valueRange.includes('-')) {
+                    const [min, max] = valueRange.split('-').map(v => v.trim());
+                    if (min.includes('d') || max.includes('d')) {
+                        // 骰子表达式
+                        value = parseDiceExpression(valueRange);
+                    } else {
+                        // 普通数值范围
+                        value = Math.floor(Math.random() * (parseInt(max) - parseInt(min) + 1)) + parseInt(min);
+                    }
+                } else {
+                    // 单个值或骰子表达式
+                    value = parseDiceExpression(valueRange);
+                }
+
+                // 替换效果模板中的*
+                const effect = affix.effect.replace(/\*/g, value);
+
+                return {
+                    name: affix.name,
+                    tier: randomTier,
+                    effect: effect,
+                    polarity: affix.polarity
+                };
+            }
+
+            // 物品库相关方法
+            renderItemsTable() {
+                const items = this.dataStore.getItems();
+                const tbody = document.getElementById('items-table-body');
+                
+                if (items.length === 0) {
+                    tbody.innerHTML = '<tr><td colspan="6" class="text-center text-gray-500">暂无物品数据，请添加物品</td></tr>';
+                    return;
+                }
+
+                // 筛选
+                const rarityFilter = document.getElementById('items-rarity-filter').value;
+                const typeFilter = document.getElementById('items-type-filter').value;
+                
+                let filteredItems = items;
+                if (rarityFilter !== 'all') {
+                    filteredItems = filteredItems.filter(item => item.rarity === rarityFilter);
+                }
+                if (typeFilter !== 'all') {
+                    filteredItems = filteredItems.filter(item => item.type === typeFilter);
+                }
+
+                // 排序
+                const sortBy = document.getElementById('items-sort-by').value;
+                filteredItems.sort((a, b) => {
+                    switch (sortBy) {
+                        case 'name-asc':
+                            return a.name.localeCompare(b.name);
+                        case 'name-desc':
+                            return b.name.localeCompare(a.name);
+                        case 'rarity-asc':
+                            return this.getRarityOrder(a.rarity) - this.getRarityOrder(b.rarity);
+                        case 'rarity-desc':
+                            return this.getRarityOrder(b.rarity) - this.getRarityOrder(a.rarity);
+                        case 'weight-asc':
+                            return parseFloat(a.weight) - parseFloat(b.weight);
+                        case 'weight-desc':
+                            return parseFloat(b.weight) - parseFloat(a.weight);
+                        default:
+                            return 0;
+                    }
+                });
+
+                tbody.innerHTML = '';
+                filteredItems.forEach(item => {
+                    const tr = document.createElement('tr');
+                    tr.innerHTML = `
+                        <td class="${getRarityClass(item.rarity)}">${item.name}</td>
+                        <td>${getRarityName(item.rarity)}</td>
+                        <td>${item.weight}</td>
+                        <td>${getTypeName(item.type)}</td>
+                        <td class="max-w-xs truncate" title="${item.description}">${item.description}</td>
+                        <td>
+                            <button class="mc-button edit-item-button" data-id="${item.id}" style="padding: 2px 8px; font-size: 12px;">编辑</button>
+                            <button class="mc-button delete-item-button" data-id="${item.id}" style="padding: 2px 8px; font-size: 12px; background-color: #D32F2F;">删除</button>
+                        </td>
+                    `;
+                    tbody.appendChild(tr);
+                });
+
+                // 添加事件监听
+                document.querySelectorAll('.edit-item-button').forEach(button => {
+                    button.addEventListener('click', (e) => {
+                        const itemId = e.target.dataset.id;
+                        this.openItemModal(itemId);
+                    });
+                });
+
+                document.querySelectorAll('.delete-item-button').forEach(button => {
+                    button.addEventListener('click', (e) => {
+                        const itemId = e.target.dataset.id;
+                        this.deleteItem(itemId);
+                    });
+                });
+            }
+
+            getRarityOrder(rarity) {
+                const order = {
+                    'common': 1,
+                    'uncommon': 2,
+                    'rare': 3,
+                    'very-rare': 4,
+                    'legendary': 5,
+                    'artifact': 6,
+                    'unknown': 7,
+                    'unknown-magic': 8
+                };
+                return order[rarity] || 0;
+            }
+
+            openItemModal(itemId = null) {
+                const modal = document.getElementById('item-modal');
+                const title = document.getElementById('item-modal-title');
+                const form = document.getElementById('item-form');
+                
+                form.reset();
+                document.getElementById('item-id').value = '';
+
+                if (itemId) {
+                    // 编辑模式
+                    const items = this.dataStore.getItems();
+                    const item = items.find(i => i.id === itemId);
+                    
+                    if (item) {
+                        title.textContent = '编辑物品';
+                        document.getElementById('item-id').value = item.id;
+                        document.getElementById('item-name').value = item.name;
+                        document.getElementById('item-rarity').value = item.rarity;
+                        document.getElementById('item-weight').value = item.weight;
+                        document.getElementById('item-type').value = item.type;
+                        document.getElementById('item-description').value = item.description;
+                    }
+                } else {
+                    // 添加模式
+                    title.textContent = '添加新物品';
+                }
+
+                modal.classList.remove('hidden');
+            }
+
+            closeItemModal() {
+                document.getElementById('item-modal').classList.add('hidden');
+            }
+
+            saveItem(e) {
+                e.preventDefault();
+                
+                const itemId = document.getElementById('item-id').value;
+                const name = document.getElementById('item-name').value.trim();
+                const rarity = document.getElementById('item-rarity').value;
+                const weight = document.getElementById('item-weight').value.trim();
+                const type = document.getElementById('item-type').value;
+                const description = document.getElementById('item-description').value.trim();
+
+                if (!name || !weight || !description) {
+                    showNotification('请填写所有必填字段');
+                    return;
+                }
+
+                const items = this.dataStore.getItems();
+
+                if (itemId) {
+                    // 更新现有物品
+                    const index = items.findIndex(i => i.id === itemId);
+                    if (index !== -1) {
+                        items[index] = {
+                            ...items[index],
+                            name,
+                            rarity,
+                            weight,
+                            type,
+                            description
+                        };
+                        showNotification('物品已更新');
+                    }
+                } else {
+                    // 添加新物品
+                    items.push({
+                        id: generateId(),
+                        name,
+                        rarity,
+                        weight,
+                        type,
+                        description
+                    });
+                    showNotification('物品已添加');
+                }
+
+                this.dataStore.saveItems(items);
+                this.renderItemsTable();
+                this.updateLibraryInfo();
+                this.closeItemModal();
+            }
+
+            deleteItem(itemId) {
+                if (!confirm('确定要删除这个物品吗？')) return;
+
+                const items = this.dataStore.getItems();
+                const filteredItems = items.filter(i => i.id !== itemId);
+                this.dataStore.saveItems(filteredItems);
+                this.renderItemsTable();
+                this.updateLibraryInfo();
+                showNotification('物品已删除');
+            }
+
+            exportItems() {
+                const items = this.dataStore.getItems();
+                const dataStr = JSON.stringify(items, null, 2);
+                const dataUri = 'data:application/json;charset=utf-8,'+ encodeURIComponent(dataStr);
+                
+                const exportFileDefaultName = 'dnd-loot-items.json';
+                
+                const linkElement = document.createElement('a');
+                linkElement.setAttribute('href', dataUri);
+                linkElement.setAttribute('download', exportFileDefaultName);
+                linkElement.click();
+                
+                showNotification('物品数据已导出');
+            }
+
+            // 词缀库相关方法
+            renderAffixesTable() {
+                const affixes = this.dataStore.getAffixes();
+                const tbody = document.getElementById('affixes-table-body');
+                
+                if (affixes.length === 0) {
+                    tbody.innerHTML = '<tr><td colspan="6" class="text-center text-gray-500">暂无词缀数据，请添加词缀</td></tr>';
+                    return;
+                }
+
+                // 筛选
+                const typeFilter = document.getElementById('affixes-type-filter').value;
+                const rarityFilter = document.getElementById('affixes-rarity-filter').value;
+                
+                let filteredAffixes = affixes;
+                if (typeFilter !== 'all') {
+                    filteredAffixes = filteredAffixes.filter(affix => affix.type === typeFilter);
+                }
+                if (rarityFilter !== 'all') {
+                    filteredAffixes = filteredAffixes.filter(affix => affix.rarity === rarityFilter);
+                }
+
+                // 排序
+                const sortBy = document.getElementById('affixes-sort-by').value;
+                filteredAffixes.sort((a, b) => {
+                    switch (sortBy) {
+                        case 'name-asc':
+                            return a.name.localeCompare(b.name);
+                        case 'name-desc':
+                            return b.name.localeCompare(a.name);
+                        case 'tier-asc':
+                            return this.getTierOrder(a.tiers) - this.getTierOrder(b.tiers);
+                        case 'tier-desc':
+                            return this.getTierOrder(b.tiers) - this.getTierOrder(a.tiers);
+                        default:
+                            return 0;
+                    }
+                });
+
+                tbody.innerHTML = '';
+                filteredAffixes.forEach(affix => {
+                    const tr = document.createElement('tr');
+                    tr.innerHTML = `
+                        <td>${affix.name}</td>
+                        <td>${getTypeName(affix.type)}</td>
+                        <td>${getRarityName(affix.rarity)}</td>
+                        <td>${affix.polarity === 'positive' ? '正面' : '负面'}</td>
+                        <td class="max-w-xs truncate" title="${affix.effect}">${affix.effect}</td>
+                        <td>
+                            <button class="mc-button edit-affix-button" data-id="${affix.id}" style="padding: 2px 8px; font-size: 12px;">编辑</button>
+                            <button class="mc-button delete-affix-button" data-id="${affix.id}" style="padding: 2px 8px; font-size: 12px; background-color: #D32F2F;">删除</button>
+                        </td>
+                    `;
+                    tbody.appendChild(tr);
+                });
+
+                // 添加事件监听
+                document.querySelectorAll('.edit-affix-button').forEach(button => {
+                    button.addEventListener('click', (e) => {
+                        const affixId = e.target.dataset.id;
+                        this.openAffixModal(affixId);
+                    });
+                });
+
+                document.querySelectorAll('.delete-affix-button').forEach(button => {
+                    button.addEventListener('click', (e) => {
+                        const affixId = e.target.dataset.id;
+                        this.deleteAffix(affixId);
+                    });
+                });
+            }
+
+            getTierOrder(tiersString) {
+                // 简单的按最高T级排序
+                if (tiersString.includes('T1')) return 1;
+                if (tiersString.includes('T2')) return 2;
+                if (tiersString.includes('T3')) return 3;
+                if (tiersString.includes('T4')) return 4;
+                if (tiersString.includes('T5')) return 5;
+                return 6;
+            }
+
+            openAffixModal(affixId = null) {
+                const modal = document.getElementById('affix-modal');
+                const title = document.getElementById('affix-modal-title');
+                const form = document.getElementById('affix-form');
+                
+                form.reset();
+                document.getElementById('affix-id').value = '';
+
+                if (affixId) {
+                    // 编辑模式
+                    const affixes = this.dataStore.getAffixes();
+                    const affix = affixes.find(a => a.id === affixId);
+                    
+                    if (affix) {
+                        title.textContent = '编辑词缀';
+                        document.getElementById('affix-id').value = affix.id;
+                        document.getElementById('affix-name').value = affix.name;
+                        document.getElementById('affix-type').value = affix.type;
+                        document.getElementById('affix-rarity').value = affix.rarity;
+                        document.getElementById('affix-polarity').value = affix.polarity;
+                        document.getElementById('affix-effect').value = affix.effect;
+                        document.getElementById('affix-tiers').value = affix.tiers;
+                    }
+                } else {
+                    // 添加模式
+                    title.textContent = '添加新词缀';
+                    // 设置默认T级范围
+                    document.getElementById('affix-tiers').value = `T1:10-20
+T2:7-12
+T3:4-8
+T4:2-5
+T5:1-3`;
+                }
+
+                modal.classList.remove('hidden');
+            }
+
+            closeAffixModal() {
+                document.getElementById('affix-modal').classList.add('hidden');
+            }
+
+            saveAffix(e) {
+                e.preventDefault();
+                
+                const affixId = document.getElementById('affix-id').value;
+                const name = document.getElementById('affix-name').value.trim();
+                const type = document.getElementById('affix-type').value;
+                const rarity = document.getElementById('affix-rarity').value;
+                const polarity = document.getElementById('affix-polarity').value;
+                const effect = document.getElementById('affix-effect').value.trim();
+                const tiers = document.getElementById('affix-tiers').value.trim();
+
+                if (!name || !effect || !tiers) {
+                    showNotification('请填写所有必填字段');
+                    return;
+                }
+
+                // 验证T级格式
+                const tierLines = tiers.split('\n');
+                const validTierRegex = /^T[1-5]:\s*.+$/i;
+                for (const line of tierLines) {
+                    if (line.trim() && !validTierRegex.test(line.trim())) {
+                        showNotification('T级格式错误，请使用 "T1:数值范围" 的格式');
+                        return;
+                    }
+                }
+
+                const affixes = this.dataStore.getAffixes();
+
+                if (affixId) {
+                    // 更新现有词缀
+                    const index = affixes.findIndex(a => a.id === affixId);
+                    if (index !== -1) {
+                        affixes[index] = {
+                            ...affixes[index],
+                            name,
+                            type,
+                            rarity,
+                            polarity,
+                            effect,
+                            tiers
+                        };
+                        showNotification('词缀已更新');
+                    }
+                } else {
+                    // 添加新词缀
+                    affixes.push({
+                        id: generateId(),
+                        name,
+                        type,
+                        rarity,
+                        polarity,
+                        effect,
+                        tiers
+                    });
+                    showNotification('词缀已添加');
+                }
+
+                this.dataStore.saveAffixes(affixes);
+                this.renderAffixesTable();
+                this.updateAffixLibraryInfo();
+                this.closeAffixModal();
+            }
+
+            deleteAffix(affixId) {
+                if (!confirm('确定要删除这个词缀吗？')) return;
+
+                const affixes = this.dataStore.getAffixes();
+                const filteredAffixes = affixes.filter(a => a.id !== affixId);
+                this.dataStore.saveAffixes(filteredAffixes);
+                this.renderAffixesTable();
+                this.updateAffixLibraryInfo();
+                showNotification('词缀已删除');
+            }
+
+            exportAffixes() {
+                const affixes = this.dataStore.getAffixes();
+                const dataStr = JSON.stringify(affixes, null, 2);
+                const dataUri = 'data:application/json;charset=utf-8,'+ encodeURIComponent(dataStr);
+                
+                const exportFileDefaultName = 'dnd-loot-affixes.json';
+                
+                const linkElement = document.createElement('a');
+                linkElement.setAttribute('href', dataUri);
+                linkElement.setAttribute('download', exportFileDefaultName);
+                linkElement.click();
+                
+                showNotification('词缀数据已导出');
+            }
+
+            // 批量导入相关
+            openImportModal(type) {
+                this.importType = type;
+                const modal = document.getElementById('import-modal');
+                const title = document.getElementById('import-modal-title');
+                
+                if (type === 'items') {
+                    title.textContent = '批量导入物品';
+                } else {
+                    title.textContent = '批量导入词缀';
+                }
+                
+                document.getElementById('import-data').value = '';
+                document.getElementById('import-overwrite').checked = false;
+                modal.classList.remove('hidden');
+            }
+
+            closeImportModal() {
+                document.getElementById('import-modal').classList.add('hidden');
+            }
+
+            importData(e) {
+                e.preventDefault();
+                
+                const dataStr = document.getElementById('import-data').value.trim();
+                const overwrite = document.getElementById('import-overwrite').checked;
+                
+                if (!dataStr) {
+                    showNotification('请输入要导入的数据');
+                    return;
+                }
+
+                try {
+                    const data = JSON.parse(dataStr);
+                    
+                    if (!Array.isArray(data)) {
+                        showNotification('数据格式错误，必须是数组');
+                        return;
+                    }
+
+                    if (this.importType === 'items') {
+                        let items = this.dataStore.getItems();
+                        
+                        if (overwrite) {
+                            items = data;
+                        } else {
+                            // 为导入的物品生成新ID
+                            data.forEach(item => {
+                                item.id = generateId();
+                                items.push(item);
+                            });
+                        }
+                        
+                        this.dataStore.saveItems(items);
+                        this.renderItemsTable();
+                        this.updateLibraryInfo();
+                        showNotification(`成功导入 ${data.length} 个物品`);
+                    } else {
+                        let affixes = this.dataStore.getAffixes();
+                        
+                        if (overwrite) {
+                            affixes = data;
+                        } else {
+                            // 为导入的词缀生成新ID
+                            data.forEach(affix => {
+                                affix.id = generateId();
+                                affixes.push(affix);
+                            });
+                        }
+                        
+                        this.dataStore.saveAffixes(affixes);
+                        this.renderAffixesTable();
+                        this.updateAffixLibraryInfo();
+                        showNotification(`成功导入 ${data.length} 个词缀`);
+                    }
+                    
+                    this.closeImportModal();
+                } catch (error) {
+                    showNotification('JSON格式错误，请检查数据');
+                    console.error(error);
+                }
+            }
+
+            // 词条库相关
+            updateLibrarySelects() {
+                const itemLibraries = this.dataStore.getItemLibraries();
+                const affixLibraries = this.dataStore.getAffixLibraries();
+                
+                const itemSelect = document.getElementById('current-library');
+                const affixSelect = document.getElementById('current-affix-library');
+                
+                itemSelect.innerHTML = '';
+                affixSelect.innerHTML = '';
+                
+                Object.keys(itemLibraries).forEach(id => {
+                    const option = document.createElement('option');
+                    option.value = id;
+                    option.textContent = itemLibraries[id].name;
+                    if (id === this.dataStore.getCurrentItemLibraryId()) {
+                        option.selected = true;
+                    }
+                    itemSelect.appendChild(option);
+                });
+                
+                Object.keys(affixLibraries).forEach(id => {
+                    const option = document.createElement('option');
+                    option.value = id;
+                    option.textContent = affixLibraries[id].name;
+                    if (id === this.dataStore.getCurrentAffixLibraryId()) {
+                        option.selected = true;
+                    }
+                    affixSelect.appendChild(option);
+                });
+            }
+
+            updateLibraryInfo() {
+                const library = this.dataStore.getCurrentItemLibrary();
+                document.getElementById('library-name').textContent = library.name;
+                document.getElementById('library-item-count').textContent = library.items.length;
+                document.getElementById('library-created').textContent = new Date(library.created).toLocaleString();
+                document.getElementById('library-modified').textContent = new Date(library.modified).toLocaleString();
+            }
+
+            updateAffixLibraryInfo() {
+                const library = this.dataStore.getCurrentAffixLibrary();
+                document.getElementById('affix-library-name').textContent = library.name;
+                document.getElementById('affix-library-count').textContent = library.affixes.length;
+                document.getElementById('affix-library-created').textContent = new Date(library.created).toLocaleString();
+                document.getElementById('affix-library-modified').textContent = new Date(library.modified).toLocaleString();
+            }
+
+            openLibraryModal(type) {
+                this.libraryType = type;
+                const modal = document.getElementById('library-modal');
+                const title = document.getElementById('library-modal-title');
+                
+                if (type === 'item') {
+                    title.textContent = '创建新物品词条库';
+                } else {
+                    title.textContent = '创建新词缀库';
+                }
+                
+                document.getElementById('library-name-input').value = '';
+                modal.classList.remove('hidden');
+            }
+
+            closeLibraryModal() {
+                document.getElementById('library-modal').classList.add('hidden');
+            }
+
+            createLibrary(e) {
+                e.preventDefault();
+                
+                const name = document.getElementById('library-name-input').value.trim();
+                
+                if (!name) {
+                    showNotification('请输入词条库名称');
+                    return;
+                }
+
+                const libraryId = generateId();
+                const now = new Date().toISOString();
+                
+                if (this.libraryType === 'item') {
+                    const newLibrary = {
+                        name,
+                        created: now,
+                        modified: now,
+                        items: []
+                    };
+                    
+                    this.dataStore.addItemLibrary(libraryId, newLibrary);
+                    this.dataStore.setCurrentItemLibrary(libraryId);
+                    this.updateLibrarySelects();
+                    this.renderItemsTable();
+                    this.updateLibraryInfo();
+                    showNotification('物品词条库已创建');
+                } else {
+                    const newLibrary = {
+                        name,
+                        created: now,
+                        modified: now,
+                        affixes: []
+                    };
+                    
+                    this.dataStore.addAffixLibrary(libraryId, newLibrary);
+                    this.dataStore.setCurrentAffixLibrary(libraryId);
+                    this.updateLibrarySelects();
+                    this.renderAffixesTable();
+                    this.updateAffixLibraryInfo();
+                    showNotification('词缀库已创建');
+                }
+                
+                this.closeLibraryModal();
+            }
+
+            deleteCurrentLibrary() {
+                const currentId = this.dataStore.getCurrentItemLibraryId();
+                
+                if (currentId === 'default') {
+                    showNotification('不能删除默认词条库');
+                    return;
+                }
+                
+                if (!confirm('确定要删除当前词条库吗？所有物品数据将永久丢失！')) return;
+                
+                this.dataStore.deleteItemLibrary(currentId);
+                this.updateLibrarySelects();
+                this.renderItemsTable();
+                this.updateLibraryInfo();
+                showNotification('物品词条库已删除');
+            }
+
+            deleteCurrentAffixLibrary() {
+                const currentId = this.dataStore.getCurrentAffixLibraryId();
+                
+                if (currentId === 'default') {
+                    showNotification('不能删除默认词缀库');
+                    return;
+                }
+                
+                if (!confirm('确定要删除当前词缀库吗？所有词缀数据将永久丢失！')) return;
+                
+                this.dataStore.deleteAffixLibrary(currentId);
+                this.updateLibrarySelects();
+                this.renderAffixesTable();
+                this.updateAffixLibraryInfo();
+                showNotification('词缀库已删除');
+            }
+        }
+
+        // 启动应用
+        document.addEventListener('DOMContentLoaded', () => {
+            new LootGeneratorApp();
+        });
+    </script>
+</body>
+</html>
+
+      </div>
+      
+      
+      
+    </div>
+    
+
+    
+    
+    
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number">1.</span> <span class="nav-text">战利品生成器</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#tab-generator"><span class="nav-number">1.1.</span> <span class="nav-text">战利品生成器</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#tab-generator"><span class="nav-number">1.1.1.</span> <span class="nav-text">词缀设置</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#tab-generator"><span class="nav-number">1.1.2.</span> <span class="nav-text">生成结果</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#tab-items"><span class="nav-number">1.2.</span> <span class="nav-text">物品库管理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#tab-affixes"><span class="nav-number">1.3.</span> <span class="nav-text">词缀库管理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#tab-libraries"><span class="nav-number">1.4.</span> <span class="nav-text">物品词条库管理</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#tab-libraries"><span class="nav-number">1.4.1.</span> <span class="nav-text">当前词条库信息</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#tab-affix-libraries"><span class="nav-number">1.5.</span> <span class="nav-text">词缀库管理</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#tab-affix-libraries"><span class="nav-number">1.5.1.</span> <span class="nav-text">当前词缀库信息</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#item-modal-title"><span class="nav-number">1.5.2.</span> <span class="nav-text">添加新物品</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#affix-modal-title"><span class="nav-number">1.5.3.</span> <span class="nav-text">添加新词缀</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#import-modal-title"><span class="nav-number">1.5.4.</span> <span class="nav-text">批量导入数据</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#library-modal-title"><span class="nav-number">1.5.5.</span> <span class="nav-text">创建新词条库</span></a></li></ol></li></ol></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">Reload404</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">1</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2026</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Reload404</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-area"></i>
+    </span>
+      <span class="post-meta-item-text">站点总字数：</span>
+    <span title="站点总字数">0k</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+      <span class="post-meta-item-text">站点阅读时长 &asymp;</span>
+    <span title="站点阅读时长">1 分钟</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
+  </div>
+
+<!-- 网站运行时间的设置 -->
+<span id="timeDate">载入天数...</span>
+<span id="times">载入时分秒...</span>
+<script>
+    var now = new Date();
+    function createtime() {
+        var grt= new Date("03/01/2023 10:00:00"); //此处修改你的建站时间或者网站上线时间
+        now.setTime(now.getTime()+250);
+        days = (now - grt ) / 1000 / 60 / 60 / 24; dnum = Math.floor(days);
+        hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum); hnum = Math.floor(hours);
+        if(String(hnum).length ==1 ){hnum = "0" + hnum;} minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum);
+        mnum = Math.floor(minutes); if(String(mnum).length ==1 ){mnum = "0" + mnum;}
+        seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum);
+        snum = Math.round(seconds); if(String(snum).length ==1 ){snum = "0" + snum;}
+        document.getElementById("timeDate").innerHTML = "本站已安全运行 "+dnum+" 天 ";
+        document.getElementById("times").innerHTML = hnum + " 小时 " + mnum + " 分 " + snum + " 秒.";
+    }
+setInterval("createtime()",250);
+</script>
+
+        
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span class="post-meta-item" id="busuanzi_container_site_uv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="总访客量">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="总访问量">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+</body>
+</html>
