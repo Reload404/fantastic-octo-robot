@@ -75,7 +75,7 @@
             color: #e6d5b8;
         }
 
-        .library-section select {
+        。library-section select {
             background-color: #654321;
             color: #d4c5a9;
             border: 1px solid #b8860b;
@@ -85,7 +85,7 @@
             min-width: 200px;
         }
 
-        .library-section select:focus {
+        。library-section select:focus {
             outline: none;
             border-color: #ffd700;
             box-shadow: 0 0 5px rgba(255, 215, 0, 0.3);
@@ -429,7 +429,7 @@
         // ==================== 全局配置 ====================
         const CONFIG = {
             // GitHub仓库基础URL（部署时请修改为你的实际地址）
-            GITHUB_BASE_URL: 'https://github.com/Reload404/fantastic-octo-robot/词条数据库',
+            GITHUB_BASE_URL: './词条数据库',
             
             // 预定义稀有度列表（与数据库保持一致）
             RARITIES: [
@@ -789,7 +789,7 @@
                 renderTypeButtons();
                 
                 // 默认选中所有稀有度和类型
-                state.selectedRarities = new Set(CONFIG.RARITIES.map(r => r.id));
+                state。selectedRarities = new Set(CONFIG.RARITIES.map(r => r.id));
                 state.selectedTypes = new Set(state.availableTypes);
                 
                 // 重新渲染按钮状态
