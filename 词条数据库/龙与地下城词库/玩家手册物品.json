@@ -1,1 +1,16 @@
-
+[
+  {
+    "name": "长剑",
+    "rarity": "common",
+    "weight": 3,
+    "type": "武器",
+    "description": "一把普通的钢制长剑，锋利但没有魔法属性。"
+  },
+  {
+    "name": "火焰之刃",
+    "rarity": "rare",
+    "weight": 3,
+    "type": "武器",
+    "description": "这把长剑的刀刃上燃烧着永不熄灭的火焰，对敌人造成额外的火焰伤害。"
+  }
+]
